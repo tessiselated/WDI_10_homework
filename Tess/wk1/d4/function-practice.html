@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <script>
+        function stringLength(x) {
+            var arrayOfNumbers = [];
+            x.forEach(function(currentValue) {
+                var number = currentValue.length;
+                arrayOfNumbers.push(number);
+            })
+
+            return arrayOfNumbers;
+        }
+
+        var nameArray = ["Minerva", "Dumbledore"]
+
+
+
+        console.log(stringLength(nameArray));
+
+
+        // 2. Write a JS function called 'transmogrifier'
+        // This function should accept three arguments, which you can assume will be numbers.
+        // Your function should return the "transmogrified" result
+        // (number1 * number2)^number3
+
+
+        function transmogrification(x, y, z) {
+            var multiplied = x * y;
+            var exponentised = Math.pow(multiplied, z)
+            return exponentised;
+        };
+
+
+
+        console.log(transmogrification(2, 3, 4));
+
+
+        // Question three
+        // Write function wordReverse accept a single argument, string. The method should return
+        // a string with the order of words reversed. Don't worry about punctuation.
+
+
+
+        var exampleSentence = "You might win some but you just lost one"
+
+
+
+
+        // The function sentenceToArray converts an argument (expected string) to an array
+
+        function sentenceToArray(sentence) {
+            var arrayOfSentence = sentence.split(" ");
+            return arrayOfSentence
+        }
+
+        // The function arrayReverse reverses the order of order of items in an array
+
+        function arrayReverse(arrayToReverse) {
+            var reversedArray = arrayToReverse.reverse();
+            return reversedArray;
+        }
+
+        // The function arrayToSentence converts a sentence into an array
+
+        function arrayToSentence(arrayToConvert) {
+            var reversedSentence = arrayToConvert.join(" ");
+            return reversedSentence;
+        }
+
+        // The bit I seem to be struggling with is passing the functions to each other
+
+        function wordReverse(astring) {
+            // Take astring and pass it to our string to array method and store result
+            var arrayOfSentence = sentenceToArray(astring);
+            // Reverse the array
+            var reversedArray = arrayReverse(arrayOfSentence);
+            // convert reversed array into a string
+            var reversedSentence = arrayToSentence(reversedArray);
+            return reversedSentence;
+        }
+
+        console.log(wordReverse(exampleSentence));
+    </script>
+</body>
+
+</html>
