@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1. Define a function maxOfTwoNumbers that takes two numbers as arguments and returns the largest
+        // of them.
+        //
+        function maxOfTwoNumbers(x, y) {
+            if (x > y) {
+                return x;
+            } else if (y > x) {
+                return y;
+            } else {
+                return "Those numbers are equal"
+            }
+        }
+
+
+
+        // 2. Define a function maxOfThree that takes three numbers as arguments and returns the largest
+        // of them.
+
+        function maxOfThree(x, y, z) {
+            var maximum = x;
+            if (y > maximum) {
+                maximum = y;
+            }
+            if (z > maximum) {
+                maximum = z;
+            }
+            return maximum;
+        }
+
+
+
+        //
+        // 3. Write a function isCharacterAVowel that takes a character (e.g. a string with length of 1)
+        // and returns true if it is a vowel, and false if it is not a vowel
+        //
+        function isCharacterAVowel(aSingleLetter) {
+            var testableString = aSingleLetter.toLowerCase();
+            var vowels = ["a", "e", "i", "o", "u"];
+            if (vowels.indexOf(testableString) != -1) {
+                return true;
+            } else return false;
+
+        }
+
+
+        // 4. Define a function sumArray and a function multiplyArray that sums and multiplies all the
+        // numbers in an array of numbers. e.g. sumArray([1,2,3,4]) should return 10 and
+        // multiplyArray([1,2,3,4]) should return 24.
+        //
+
+        function multiplyArray(anArray) {
+            var totalOfMultiplication = 1;
+            anArray.forEach(function(currentValue) {
+                totalOfMultiplication = totalOfMultiplication * currentValue;
+            })
+            return totalOfMultiplication;
+        }
+
+
+
+
+        // 5. Write a function that returns the number of arguments passed to the function when
+        // called
+
+        function countArguments() {
+            var arrayOfArguments = Array.from(arguments);
+            console.log(arrayOfArguments.length);
+        }
+    </script>
+
+</body>
+
+</html>
