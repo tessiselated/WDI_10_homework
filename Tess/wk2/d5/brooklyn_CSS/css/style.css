@@ -1,3 +1,27 @@
 .container {
-  padding: 15px 25px 15px 25px;
+  padding: 15px 25px 15px 40px;
+  width: 965px;
+}
+
+p.post-content {
+  text-align: justify;
+}
+
+h1 {
+  color: #b2b2b2;
+}
+
+h2, p.post-content, footer {
+  color: #777770;
+}
+
+p.post-date {
+  margin-bottom: -10px;
+}
+
+img.press-logo {
+  border-style: solid;
+  border-color: #b2b2b2;
+  border-width: 6px;
+  padding: 1px;
 }
