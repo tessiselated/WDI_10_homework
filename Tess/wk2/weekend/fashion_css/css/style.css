@@ -1,0 +1,148 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1.site-heading, h2.site-subheading {
+    font-weight: 100;
+    display: inline-block;
+}
+
+div.container {
+    margin: 25px 0px 25px 25px;
+    width: 1030px;
+}
+
+h1.site-heading {
+    color: #d30300;
+    font-size: 3em;
+    margin-right: 20px;
+}
+
+h2.site-subheading {
+    color: #999999;
+    margin-top: -20px;
+
+}
+
+a.top-nav-link {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px 35px 20px 35px;
+    margin: -1px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 100px;
+}
+
+p.post-date {
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: #bcbcbc;
+    margin-bottom: 0px;
+}
+
+h2.post-heading {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img.post-image {
+    height: auto;
+    width: auto;
+    max-width: 675px;
+    max-height: 675px;
+}
+
+div.container-main {
+    width: 675px;
+}
+
+a.read-more {
+    color: #d30300;
+    text-decoration: none;
+    font-weight: 900;
+    float: right;
+}
+
+
+div.spacer:before, div.spacer:after {
+    content: " ";
+    display: table;
+}
+
+div.spacer:after {
+    clear: both;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+p.post-text {
+    color: #474747;
+}
+
+
+p.post-text:first-letter {
+    float: left;
+    color: #bcbcbc;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+
+div.side-container {
+    width: 330px;
+    float: right;
+    padding-top: 50px;
+}
+
+h3.column-heading {
+    font-size: 1.25em;
+    font-weight: 900;
+}
+
+h3.column-heading, p.side-text {
+    color: #a0a0a0;
+}
+
+div.spacer {
+    height: 40px;
+}
+
+div.ad {
+    background-color: grey;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+    font-size: 4em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+a.further-links, a.b-nav-link {
+    color: #d30300;
+    text-decoration: none;
+    font-weight: 200;
+
+}
+
+ul.list-of-links {
+    color: grey;
+}
+
+nav {
+    font-weight: 200;
+}
+
+footer > p {
+    color: #bcbcbc;
+}
