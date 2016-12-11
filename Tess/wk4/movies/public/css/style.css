@@ -1,3 +1,50 @@
 body {
-  background-color: blue;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #EFF6E0;
+}
+
+h1 {
+  background-color: #B5D8CC;
+  margin: 0px;
+  padding: 20px;
+}
+
+form {
+  padding-top: 10px;
+}
+
+input {
+  width: 60%;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: large;
+  padding-left: 5px;
+}
+
+button {
+    background-color: #124559;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+div.container {
+  padding: 15px;
+}
+
+div.movie-container {
+  padding: 20px;
+}
+
+div.headings-container {
+  padding-left: 20px;
+}
+
+div.movie-info {
+  float: right;
+  width: 750px;
 }
