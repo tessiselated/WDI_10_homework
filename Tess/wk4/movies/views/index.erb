@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Movie App</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Movie App</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
 
-</head>
-<body>
-<div class="container">
+    </head>
+    <body>
+        <div class="container">
 
-<div class ="headings-container">
-  <h1>Movie Info</h1>
-    <form action="/" method="get">
+            <div class="headings-container">
+                <h1>Movie Info</h1>
+                <form action="/" method="get">
 
+                    <input name="movie" type="text" placeholder="Type Movie"/>
+                    <button>Get Movie Info</button>
+                </form>
+            </div>
 
-    <input name="movie" type = "text" placeholder = "Type Movie" />
-    <button>Get Movie Info</button>
-    </form>
-</div>
+            <div class="movie-container">
 
-<% if @movie != nil %>
-<div class = "movie-container">
-
-  <div class = "movie-info">
+            <% if @movie and @movie_raw["Response"] == "True"  %>
 
 
-    <p>
-      <%= @title %>
-    </p>
+                <div class="movie-info">
 
-    <p>
-      Year = <%= @year %>
-    </p>
+                    <p>
+                        <%= @title %>
+                    </p>
 
-    <p>
-      Director = <%= @director %>
-    </p>
+                    <p>
+                        Year =
+                        <%= @year %>
+                    </p>
 
-    <p>
-      Runtime = <%= @runtime %>
-    </p>
+                    <p>
+                        Director =
+                        <%= @director %>
+                    </p>
 
-    </div>
+                    <p>
+                        Runtime =
+                        <%= @runtime %>
+                    </p>
 
-<div class = "poster">
-  <img src = <%= (@poster)%> />
-</div>
+                </div>
 
+                <div class="poster">
+                    <img src=<%= (@poster)%>/>
+                </div>
 
-</div>
+                <% elsif @movie and @movie_raw["Response"] == "False" %>
 
-<% end %>
+                <p>
+                    Please check your input and try again
+                </p>
 
-</div>
-</body>
+            </div>
+
+            <% end %>
+
+        </div>
+    </body>
 </html>
