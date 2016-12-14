@@ -32,6 +32,10 @@ button {
     font-size: 16px;
 }
 
+a {
+  color: #087F8C;
+}
+
 div.container {
   padding: 15px;
 }

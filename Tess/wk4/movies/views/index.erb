@@ -1,18 +1,30 @@
+<div class="container">
 
-        <div class="container">
+    <div class="headings-container">
+        <h1>Movie Info</h1>
+        <form action="/" method="get">
 
-            <div class="headings-container">
-                <h1>Movie Info</h1>
-                <form action="/" method="get">
+            <input name="search" type="text" placeholder="Type Movie"/>
+            <button>Get Movie Info</button>
+        </form>
+    </div>
 
-                    <input name="movie" type="text" placeholder="Type Movie"/>
-                    <button>Get Movie Info</button>
-                </form>
+    <div class="movie-container">
+
+        <% if @search_results  %>
+
+        <div class="movie-list">
+
+            <% @title_array.each do |i| %>
+            <li>
+                <a href='/movie/<%= "#{i}" %>'><%= "#{i}" %>
+                </li>
+                <% end %>
+
             </div>
+        <% end %>
 
-            <div class="movie-container">
-
-            <% if @movie and @movie_raw["Response"] == "True"  %>
+        <% if @movie and @movie_raw["Response"] == "True"  %>
 
 
                 <div class="movie-info">
@@ -42,14 +54,8 @@
                     <img src=<%= (@poster)%>/>
                 </div>
 
-                <% elsif @movie and @movie_raw["Response"] == "False" %>
-
-                <p>
-                    Please check your input and try again
-                </p>
-
             </div>
 
-            <% end %>
+        <% end %>
 
         </div>
