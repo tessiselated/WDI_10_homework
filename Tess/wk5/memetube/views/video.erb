@@ -1,0 +1,14 @@
+<h1><%= @video.title %></h1>
+<h3><%= @video.description %></h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video.url.split("/").last.to_s %>" frameborder="0" allowfullscreen></iframe>
+
+<br />
+<a href = "http://localhost:4567/video/<%= @video.id %>/edit">Edit video</a>
+
+<% if current_page?("./video/<%= @video.id %>/edit") %>
+
+<p>
+  Hi
+</p>
+<% end %>

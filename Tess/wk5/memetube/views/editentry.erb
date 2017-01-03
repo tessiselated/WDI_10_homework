@@ -1,0 +1,7 @@
+<form action="/video/<%= @video.id %>/edit" method="post">
+  <input name="title" value = "<%= @video.title %>" />
+  <input name="url" value = <%= @video["url"] %> />
+  <textarea name ="description"><%= @video["description"] %></textarea>
+  <input name= "genre" value= <%= @video["genre"] %> >
+  <button type="submit">Edit Video</button>
+</form>

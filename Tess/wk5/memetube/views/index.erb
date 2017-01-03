@@ -1,0 +1,25 @@
+<a href = "./videosubmit">Submit a video</a>
+
+<% if url == "http://localhost:4567/videosubmit" %>
+
+  <form action="/videosubmit" method="post">
+  <input name="title" placeholder="Video Title"/>
+  <input name="url" placeholder="Video Address"/>
+  <textarea name ="description" placeholder="Description"></textarea>
+  <input name ="genre" placeholder="Genre" />
+  <button type="submit">Submit Video</button>
+</form>
+
+
+<% end %>
+
+
+
+<ul>
+
+  <% @videos.each do |video| %>
+  <li>
+    <a href = "/video/<%= video.id %>"><%=video.print_values %></a>
+  </li>
+  <% end %>
+</ul>
